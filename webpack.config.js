@@ -119,7 +119,7 @@ module.exports = {
           },
           {
             test:/\.(ttf|woff|woff2|eot)$/,
-            type: 'asset/resource'
+            type: "asset/resource"
           },
           {
             test: /\.m?js$/,

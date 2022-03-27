@@ -1,0 +1,8 @@
+@import '../abstracts/constants';
+@import '../abstracts/placeholder';
+@import '../abstracts/mixins';
+
+.content-wrapper{
+    @include flex($j_content:space-between,$wrap:no-wrap);
+    padding-bottom: 270px;
+}

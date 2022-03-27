@@ -1,0 +1,33 @@
+.pagination{
+    width: 100%;
+
+    &__wrapper{
+        padding-top: 64px;
+        padding-bottom: 24px;
+    }
+
+    &__list{
+        @include flex($align:center, $j_content:flex-start);
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item{
+        margin-right: 0.5em;
+        list-style-type: '-';
+    }
+    &__item:first-child{
+        list-style: none;
+    }
+
+    &__link{
+        @extend %font-prim;
+        @include font-param($size:1.4rem, $weight:500, $height:2rem);
+        color: $color-copyright;
+    }
+    &__item:last-child{
+        a{
+            color: $color-button;
+        }
+    }
+}

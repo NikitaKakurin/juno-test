@@ -1,0 +1,42 @@
+.footer{
+    width: 100%;
+
+    &__wrapper{
+        @include flex($align:center, $j-content:space-between);
+        padding-top: 37px;
+        padding-bottom: 36px;
+    }
+
+    &__copyright_text{
+       @include font-param($size:1.8rem, $weight:500, $height:2.4rem);
+       width: 335px;
+       color: $color-copyright;
+    }
+
+    &__development_wrapper{
+        @include flex($align:center, $j-content:space-between);
+        gap: 147px;
+    }
+
+    &__rules{
+        @extend %font-prim;
+        @include font-param($size:1.4rem, $weight:400, $height:2rem);
+       color: $color-button;
+    }
+
+    &__development{
+        @extend %font-prim;
+        @include font-param($size:1.8rem, $weight:500, $height:2.4rem);
+        color: $color-copyright;
+        margin-right: 8px;
+    }
+    
+    &__developer{
+        @extend %font-prim;
+        @include font-param($size:1.8rem, $weight:700, $height:2.4rem);
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        color: $color-developer;
+    }
+}

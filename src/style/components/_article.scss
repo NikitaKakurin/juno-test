@@ -1,0 +1,34 @@
+@import '../abstracts/constants';
+@import '../abstracts/placeholder';
+@import '../abstracts/mixins';
+
+.article{
+    width: 100%;
+    max-width: 1045px;
+
+    &__wrapper{
+        @include flex($j_content:space-between);
+        width: 100%;
+        gap: 20px;
+    }
+}
+
+
+
+.product_card{
+    width: 246px;
+    margin: 0;
+
+    img{
+        width: 246px;
+        height: 200px;
+    }
+
+    figcaption{
+        @include flex($align:center, $j_content:center);
+        width: 100%;
+        text-align: center;
+        min-height: 112px;
+        background-color: $color-category;
+    }
+}

@@ -1,0 +1,28 @@
+@import './base/fonts';
+@import './base/normalize';
+
+// -----abstracts----
+@import './abstracts/constants';
+@import './abstracts/placeholder';
+@import './abstracts/mixins';
+
+// -----base-----
+@import './base/base';
+@import './base/buttons';
+
+// -----layout----
+@import './layout/container';
+@import './layout/wrapper';
+@import './layout/header';
+@import './layout/main.scss';
+@import './layout/content.scss';
+@import './layout/footer';
+
+// -----components----
+@import './components/feedback';
+@import './components/navigation';
+@import './components/logo';
+@import './components/pagination';
+@import './components/aside';
+@import './components/article';
+@import './components/contact';
