@@ -8,4 +8,11 @@
     &__wrapper{
         @include flex($j_content:space-between,$align:center);
     }
+
+    @media (max-width:1300px) {
+        &__wrapper{
+            position: relative;
+        }
+
+    }
 }

@@ -39,4 +39,20 @@
         cursor: pointer;
         color: $color-developer;
     }
+
+    @media(max-width:940px){
+
+        &__wrapper{
+            @include flex($direction:column, $align:center);
+        }
+
+        &__development_wrapper{
+            @include flex($direction:column, $align:center);
+            gap: 0px;
+        }
+
+        &__copyright_text{
+            text-align: center;
+        }
+    }
 }

@@ -29,3 +29,14 @@ body{
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+.underline{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    @extend %transition;
+    background-color: $color-button;
+}

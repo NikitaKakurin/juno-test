@@ -79,6 +79,25 @@
         height:18px;
     }
 
+    @media(max-width:1000px){
+        &__content{
+            padding: 20px 0;
+        }
 
+        &__address{
+            @include flex($direction:column, $j-content:center);
+            max-width: 350px;
+            gap: 1rem;
+        }
+
+    }
+
+    @media(max-width:700px){
+        &__content{
+            @include flex($direction:column, $j-content:center);
+            max-width: 320px;
+            row-gap: 2rem;
+        }
+    }
 }
 

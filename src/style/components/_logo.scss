@@ -2,3 +2,12 @@
 @import '../abstracts/placeholder';
 @import '../abstracts/mixins';
 
+.logo{
+
+    @media (max-width:370px) {
+        img{
+            width: 150px;
+            height: auto;
+        }
+    }
+}

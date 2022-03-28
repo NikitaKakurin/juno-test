@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+    <div class="burger_shadow"></div>
         <header class = "header">
             <h1 class="visually-hidden">Алгоритм Прибор</h1>
             <div class = "wrapper header__wrapper">
@@ -18,14 +19,19 @@
                 </div>
                 <nav class="navigation">
                     <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#" class="navigation__link">Продукция</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">О компании</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Покупателям</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Сервис и поддержка</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Оплата и доставка</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Контакты</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link navigation__link-active">Продукция</a><span class="underline"></span></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">О компании</a><span class="underline"></span></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Покупателям</a><span class="underline"></span></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Сервис и поддержка</a><span class="underline"></span></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Оплата и доставка</a><span class="underline"></span></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Контакты</a><span class="underline"></span></li>
                     </ul>
                 </nav>
+                <div class="burger-button">
+                    <div class="burger-button__line"></div>
+                    <div class="burger-button__line"></div>
+                    <div class="burger-button__line"></div>
+                </div>
             </div>
         </header>
         <section class = "feedback">
@@ -45,10 +51,10 @@
             <div class="main__wrapper">
                 <div class="wrapper pagination__wrapper">
                     <nav class="pagination">
-                        <ul class="pagination__list">
-                            <li class="pagination__item"><a href="#" class="pagination__link">Главная</a></li>
-                            <li class="pagination__item"><a href="#" class="pagination__link">Продукция</a></li>
-                            <li class="pagination__item"><a href="#" class="pagination__link">Температура</a></li>
+                        <a href="#" class="pagination__link pagination__link-main">Главная</a>
+                        <ul class="pagination__list">                            
+                            <li class="pagination__item"><span class="pagination-dash">-</span><a href="#" class="pagination__link">Продукция</a></li>
+                            <li class="pagination__item"><span class="pagination-dash">-</span><a href="#" class="pagination__link">Температура</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -58,7 +64,7 @@
                         <nav class="catalog">
                             <ul class="catalog__list">
                                 <li class="catalog__item">
-                                    <h5 class="catalog__category">Температура</h5>
+                                    <h5 class="catalog__category catalog__category-active">Температура <span class="underline"></span></h5>
                                     <ul class="products_type">
                                         <li class="products_type__item">
                                             <button class="product__button">Датчики температуры (термопреобразователи)</button>
@@ -75,35 +81,48 @@
                                     </ul>
                                 </li>
                                 <li class="catalog__item">
-                                    <h5 class="catalog__category">Давление</h5>
+                                    <h5 class="catalog__category">Давление <span class="underline"></span></h5>
                                 </li>
                                 <li class="catalog__item">
-                                    <h5 class="catalog__category">Расход</h5>
+                                    <h5 class="catalog__category">Расход <span class="underline"></span></h5>
                                 </li>
                                 <li class="catalog__item">
-                                    <h5 class="catalog__category">Функциональная аппаратура</h5>
+                                    <h5 class="catalog__category">Функциональная аппаратура <span class="underline"></span></h5>
                                 </li>
                             </ul>
                         </nav>
                     </aside>
                     <article class = "arcticle">
+                        <h2 class="visually-hidden">Наши продукты</h1>
                         <div class="article__wrapper">
-                            <figure class="product_card">
-                                <img src="./assets/img/1.png" alt="Датчики температуры (термопреобразователи)">
-                                <figcaption>Датчики температуры (термопреобразователи)</figcaption>
-                            </figure>
-                            <figure class="product_card">
-                                <img src="./assets/img/2.png" alt="Датчики температуры (термопреобразователи)">
-                                <figcaption>Механические термометры</figcaption>
-                            </figure>
-                            <figure class="product_card">
-                                <img src="./assets/img/3.png" alt="Датчики температуры (термопреобразователи)">
-                                <figcaption>Пирометры</figcaption>
-                            </figure>
-                            <figure class="product_card">
-                                <img src="./assets/img/4.png" alt="Датчики температуры (термопреобразователи)">
-                                <figcaption>Арматура для термометров и датчиков температуры</figcaption>
-                            </figure>
+                            <a href="#" class="product_card">                            
+                                <figure class="product_card__wrapper">
+                                    <img src="./assets/img/1.png" alt="Датчики температуры (термопреобразователи)">
+                                    <figcaption><span>Датчики температуры (термопреобразователи)</span></figcaption>
+                                </figure>
+                            </a>
+
+                            <a href="#" class="product_card">                            
+                                <figure class="product_card__wrapper">
+                                    <img src="./assets/img/2.png" alt="Датчики температуры (термопреобразователи)">
+                                    <figcaption><span>Механические термометры</span></figcaption>
+                                </figure>
+                            </a>
+
+                            <a href="#" class="product_card">                            
+                                <figure class="product_card__wrapper">
+                                    <img src="./assets/img/3.png" alt="Датчики температуры (термопреобразователи)">
+                                    <figcaption><span>Пирометры</span></figcaption>
+                                </figure>
+                            </a>
+
+                            <a href="#" class="product_card">                            
+                                <figure class="product_card__wrapper">
+                                    <img src="./assets/img/4.png" alt="Датчики температуры (термопреобразователи)">
+                                    <figcaption><span>Арматура для термометров и датчиков температуры</span></figcaption>
+                                </figure>
+                            </a>
+
                         </div>
                     </article>
                 </div>
@@ -137,12 +156,12 @@
                             </div>
                             <div class="form__apply_wrapper">
                                 <div class="form__rules_wrapper rules_wrapper">                            
-                                    <input type="checkbox" name="rules" id="rules" class="visually-hidden">
+                                    <input type="checkbox" name="rules" id="rules" class="visually-hidden checkbox" >
                                     <label class = "form__label_rules" for="rules"> <span class = "label__inner"></span></label>
                                     <span class="form__rules_text">Я соглашаюсь с <a href = "#">политикой обработки персональных данных</a></span>
                                 </div>
                                 <div class="form__rules_wrapper">  
-                                    <button class="button feedback__button">Отправить заявку</button>
+                                    <button class="button form__button">Отправить заявку</button>
                                 </div>
                             </div>
                         </form>

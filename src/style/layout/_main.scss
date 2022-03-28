@@ -18,6 +18,11 @@
         margin-top: 0;
         margin-bottom: 64px;
         @extend %font-prim;
-        @include font-param($size:5rem, $weight:700, $height:59px)
+        @include font-param($size:5rem, $weight:700, $height:59px);
+
+        @media (max-width:370px) {
+            font-size: 2.5rem;
+        }
     }
+
 }

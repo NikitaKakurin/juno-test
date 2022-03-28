@@ -28,7 +28,16 @@
         @include font-param($size:1.8rem, $weight:500, $height:3rem);
     }
 
-
+    @media(max-width:1300px){
+        &__wrapper{
+            @include flex($direction:column, $j-content:space-between,$align:center);
+        }
+        &__content_wrapper{
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+    }
 }
 
 .form{
@@ -45,11 +54,18 @@
         background-color: $color-button-text;
 
         input{
+            @extend %cursor;
+            @extend %transition;
             width: 100%;
             max-width: 363px;
             height: 60px;
             padding-left: 24px;
             border: none;
+
+            &:hover,
+            &:hover::placeholder{
+                color:#000;
+            }
         }
     }
 
@@ -103,24 +119,7 @@
         max-width:424px;
     }
 
-    &__label_rules{
-        @include flex($j-content:center, $align:center);
-        width: 11px;
-        height: 11px;
-        border: 1px solid #1c1c1c;
-        margin-right: 13px;
-        margin-top: 2px;
-
-                
-        .label__inner{
-            display: inline-block;
-            height: 5px;
-            width: 5px;
-            border-radius: 1px solid $color-button;
-            background-color: $color-button;
-        }
-    }
-    
+  
     .rules_wrapper{
         height: 100%;
         align-items: flex-start;
@@ -144,5 +143,23 @@
         }
     }
 
+    @media (max-width:930px){
+        justify-content: center;
 
+        &__apply_wrapper{
+            justify-content: center;
+        }
+
+        &__rules_text{
+            height: auto;
+
+        }
+
+        &__rules_wrapper{
+            justify-content: flex-end;
+        }
+        .rules_wrapper{
+            padding-right: 0;
+        }
+    }
 }

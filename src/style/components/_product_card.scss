@@ -1,0 +1,48 @@
+@import '../abstracts/constants';
+@import '../abstracts/placeholder';
+@import '../abstracts/mixins';
+
+.product_card{
+    text-decoration: none;
+    @extend %font-prim;
+    @include font-param($size:1.4rem, $height:2rem, $weight:700);
+    color: $color-text;
+
+    &__wrapper{
+        width: 246px;
+        margin: 0;
+        overflow: hidden;
+        
+        @extend %cursor;
+    
+        &:hover>img{
+            transform: scale(1.1);
+            z-index: 1;
+        }
+    
+        img{
+            display: block;
+            background-color: #fff;
+            width: 246px;
+            height: 200px;
+            @extend %transition;
+        }
+    
+    
+    
+        figcaption{
+            @include flex($align:center, $j_content:center);
+            width: 100%;
+            text-align: center;
+            min-height: 112px;
+            background-color: $color-category;
+    
+            span{
+                width: 174px;
+                text-align: left;
+            }
+        }
+    
+    }
+
+}

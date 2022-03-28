@@ -1,6 +1,6 @@
 .pagination{
     width: 100%;
-
+    @include flex($j_content: flex-start, $align:center);
     &__wrapper{
         padding-top: 64px;
         padding-bottom: 24px;
@@ -13,21 +13,33 @@
     }
 
     &__item{
-        margin-right: 0.5em;
-        list-style-type: '-';
-    }
-    &__item:first-child{
         list-style: none;
     }
 
     &__link{
+        @extend %cursor;
+        @extend %transition;
         @extend %font-prim;
         @include font-param($size:1.4rem, $weight:500, $height:2rem);
         color: $color-copyright;
+        text-decoration: none;
+
+        &:hover{
+            color: darken($color-copyright, 20%)
+        }
     }
+
     &__item:last-child{
         a{
             color: $color-button;
         }
+    }
+
+    &-dash{
+        @extend %font-prim;
+        @include font-param($size:1.4rem, $weight:500, $height:2rem);
+        color: $color-copyright;
+        padding-left:0.2em;
+        padding-right:0.2em;
     }
 }

@@ -4,7 +4,7 @@
 
 .aside{
     width: 100%;
-    max-width: 355px;
+    max-width: 266px;
 }
 
 .catalog{
@@ -21,6 +21,9 @@
     }
 
     &__category{
+        position: relative;
+        @extend %cursor;
+        @extend %text-transform;
         @extend %font-prim;
         @include font-param($size:1.4rem, $weight:700, $height:1.7rem, $letter:0.05em);
         display: inline-block;
@@ -31,22 +34,37 @@
         padding-left: 30px;
         border-bottom: 1px solid #E6E6E6;
         background-color: $color-category;
-        text-transform: uppercase;
+
+        &:hover>.underline{
+            width: 100%;
+        }
+
+        &-active>.underline{
+            width: 100%;
+        }
     }
 }
 
 .products_type{
     list-style: none;
+    @extend %cursor;
     @include flex($direction: column);
     padding: 24px 0;
-    row-gap: 16px;
+    row-gap: 14px;
+
+
     .product__button{
+        @extend %transition;
         @extend %font-prim;
         @include font-param( $weight:700, $height:2.4rem);
         padding-left: 30px;
         background-color: transparent;
         border: none;
         text-align: left;
-        cursor:pointer;
+        @extend %cursor;
+
+        &:hover{
+            color:lighten($color-additional,45%)
+        }
     }
 }
