@@ -54,7 +54,7 @@
                         <a href="#" class="pagination__link pagination__link-main">Главная</a>
                         <ul class="pagination__list">                            
                             <li class="pagination__item"><span class="pagination-dash">-</span><a href="#" class="pagination__link">Продукция</a></li>
-                            <li class="pagination__item"><span class="pagination-dash">-</span><a href="#" class="pagination__link">Температура</a></li>
+                            <li class="pagination__item"><span class="pagination-dash">-</span><a href="#" class="pagination__link pagination__link-current">Температура</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -64,30 +64,69 @@
                         <nav class="catalog">
                             <ul class="catalog__list">
                                 <li class="catalog__item">
-                                    <h5 class="catalog__category catalog__category-active">Температура <span class="underline"></span></h5>
-                                    <ul class="products_type">
-                                        <li class="products_type__item">
-                                            <button class="product__button">Датчики температуры (термопреобразователи)</button>
+                                    <h5 class="catalog__category catalog__category-active" data-category="temperature">Температура <span class="underline"></span></h5>
+                                    <ul class="catalog__type catalog__type-active" data-category="temperature">
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Датчики температуры (термопреобразователи)</button>
                                         </li>
-                                        <li class="products_type__item">
-                                            <button class="product__button">Механические термометры	</button>
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Механические термометры	</button>
                                         </li>
-                                        <li class="products_type__item">
-                                            <button class="product__button">Пирометры</button>
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Пирометры</button>
                                         </li>
-                                        <li class="products_type__item">
-                                            <button class="product__button">Арматура для термометров и датчиков температуры	</button>
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Арматура для термометров и датчиков температуры	</button>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="catalog__item">
-                                    <h5 class="catalog__category">Давление <span class="underline"></span></h5>
+                                    <h5 class="catalog__category" data-category="pressure">Давление <span class="underline"></span></h5>
+                                    <ul class="catalog__type" data-category="pressure">
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Датчики давления</button>
+                                        </li>
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Манометры	</button>
+                                        </li>
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Датчики-реле давления</button>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="catalog__item">
-                                    <h5 class="catalog__category">Расход <span class="underline"></span></h5>
+                                    <h5 class="catalog__category" data-category="flow">Расход <span class="underline"></span></h5>
+                                    <ul class="catalog__type" data-category="flow">
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Ротаметры стеклянные</button>
+                                        </li>
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Теплосчетчики</button>
+                                        </li>
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Расходомеры жидкости</button>
+                                        </li>
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Счетчики газа</button>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="catalog__item">
-                                    <h5 class="catalog__category">Функциональная аппаратура <span class="underline"></span></h5>
+                                    <h5 class="catalog__category" data-category="equipment">Функциональная аппаратура <span class="underline"></span></h5>
+                                    <ul class="catalog__type" data-category="equipment">
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Программируемые логические контроллеры SIMATIC S7-200</button>
+                                        </li>
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Универсальные логические модули LOGO</button>
+                                        </li>
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Блоки питания SITOP</button>
+                                        </li>
+                                        <li class="catalog__type_item">
+                                            <button class="catalog__button">Датчики и контроллеры Аutonics, OMRON</button>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </nav>

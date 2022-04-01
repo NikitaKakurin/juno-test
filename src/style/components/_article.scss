@@ -7,7 +7,7 @@
     max-width: 1045px;
 
     &__wrapper{
-        @include flex($j_content:space-between);
+        @include flex($j_content:space-evenly);
         width: 100%;
         gap: 20px;
     }

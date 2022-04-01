@@ -43,17 +43,9 @@
             width: 100%;
         }
     }
-}
-
-.products_type{
-    list-style: none;
-    @extend %cursor;
-    @include flex($direction: column);
-    padding: 24px 0;
-    row-gap: 14px;
 
 
-    .product__button{
+    &__button{
         @extend %transition;
         @extend %font-prim;
         @include font-param( $weight:700, $height:2.4rem);
@@ -62,9 +54,26 @@
         border: none;
         text-align: left;
         @extend %cursor;
-
+    
         &:hover{
             color:lighten($color-additional,45%)
         }
     }
+
+    &__type{
+        list-style: none;
+        @extend %cursor;
+        @include flex($direction: column);
+        max-height: 0px;
+        overflow: hidden;
+        row-gap: 14px;
+        transition: max-height 0.5s, padding 0.5s;
+    
+        &-active{        
+            max-height: 400px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+    }
 }
+

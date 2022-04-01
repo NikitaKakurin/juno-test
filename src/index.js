@@ -1,8 +1,11 @@
 import './style/style.scss';
-import {Burger}from './js/burger.js';
+import {Burger} from './js/burger.js';
+import {Catalog} from './js/products.js';
+
 
 window.addEventListener('load', ()=>{
-    const burger = new Burger('.burger-button','.navigation__list')
+    const burger = new Burger('.burger-button','.navigation__list');
+    const catalog = new Catalog('.main');
     burger.closeMenu()
     document.addEventListener('click', handleClick)
 
@@ -15,7 +18,11 @@ window.addEventListener('load', ()=>{
             if(burger.isMenuOpen){
                 burger.closeMenu();
             }
-            return;
+        }
+
+        if (event.target.closest('.catalog__category')) {
+            const category = event.target.closest('.catalog__category');
+            catalog.changeCategory(category)
         }
     }
 })
