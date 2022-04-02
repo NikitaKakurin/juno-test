@@ -8,11 +8,11 @@
 }
 
 .catalog{
-
     &__list{
         list-style: none;
         margin: 0;
         padding: 0;
+        padding-bottom: 1px;
     }
 
     &__item{
@@ -63,7 +63,7 @@
     &__type{
         list-style: none;
         @extend %cursor;
-        @include flex($direction: column);
+        @include flex($direction: column, $wrap:nowrap);
         max-height: 0px;
         overflow: hidden;
         row-gap: 14px;

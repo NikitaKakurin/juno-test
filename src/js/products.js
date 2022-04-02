@@ -12,6 +12,7 @@ export class Catalog{
             this.deactivateTypes();
             return;
         }
+        
         this.deactivateCategory();
         this.deactivateTypes();
         
